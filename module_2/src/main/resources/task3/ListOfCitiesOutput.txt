@@ -1,0 +1,6 @@
+The shortest way from gdansk to warszawa is: 
+gdansk ---> bydgoszcz ---> torun ---> warszawa
+Length is equal 3.0
+The shortest way from bydgoszcz to warszawa is: 
+bydgoszcz ---> torun ---> warszawa
+Length is equal 2.0
