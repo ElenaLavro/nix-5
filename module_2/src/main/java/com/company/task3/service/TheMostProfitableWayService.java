@@ -90,7 +90,7 @@ public class TheMostProfitableWayService {
         ) {
             for (String[] way : ways) {
                 String s = " ";
-                DijkstraShortestPath shortestPath = new DijkstraShortestPath(cityGraph);
+                DijkstraShortestPath<String, DefaultWeightedEdge> shortestPath = new DijkstraShortestPath<>(cityGraph);
                 List<String> shortestWay = shortestPath.getPath(way[0], way[1]).getVertexList();
                 double weight = shortestPath.getPath(way[0], way[1]).getWeight();
                 fw.write("The shortest way from " + way[0] + " to " + way[1] + " is: ");
