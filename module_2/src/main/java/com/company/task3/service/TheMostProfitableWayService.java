@@ -96,6 +96,7 @@ public class TheMostProfitableWayService {
                 fw.write("The shortest way from " + way[0] + " to " + way[1] + " is: ");
                 fw.write("\n");
 
+
                 for (int i = 0; i < shortestWay.size() - 1; i++) {
                     fw.write(shortestWay.get(i) + " ---> ");
                 }
