@@ -1,0 +1,138 @@
+2021-06-26 15:54:26 INFO  AuthorServiceImpl:17 - Start creating book
+2021-06-26 17:54:36 INFO  AuthorServiceImpl:38 - Start updating the book
+2021-06-26 17:54:36 INFO  AuthorServiceImpl:40 - End updating the book
+2021-06-26 17:54:49 INFO  AuthorServiceImpl:31 - Start reading by ID
+2021-06-26 17:54:49 INFO  AuthorServiceImpl:32 - End reading by ID
+2021-06-26 17:55:31 INFO  AuthorServiceImpl:17 - Start creating book
+2021-06-26 18:20:50 INFO  AuthorServiceImpl:17 - Start creating book
+2021-06-26 18:26:03 INFO  AuthorServiceImpl:17 - Start creating book
+2021-06-26 18:27:44 INFO  AuthorServiceImpl:17 - Start creating book
+2021-06-26 18:27:44 INFO  AuthorServiceImpl:19 - End creating book
+2021-06-26 18:27:53 INFO  AuthorServiceImpl:31 - Start reading by ID
+2021-06-26 18:27:53 INFO  AuthorServiceImpl:32 - End reading by ID
+2021-06-26 18:28:25 INFO  AuthorServiceImpl:24 - Start reading all books
+2021-06-26 18:28:25 INFO  AuthorServiceImpl:25 - End reading all books
+2021-06-26 18:28:34 INFO  AuthorServiceImpl:45 - Start deleting the book
+2021-06-26 18:28:34 INFO  AuthorServiceImpl:47 - End deleting the book
+2021-06-26 18:32:01 INFO  AuthorServiceImpl:17 - Start creating book
+2021-06-26 18:32:01 INFO  AuthorServiceImpl:19 - End creating book
+2021-06-26 18:33:09 INFO  AuthorServiceImpl:17 - Start creating book
+2021-06-26 18:33:09 INFO  AuthorServiceImpl:19 - End creating book
+2021-06-26 18:34:47 INFO  AuthorServiceImpl:17 - Start creating author
+2021-06-26 18:34:47 INFO  AuthorServiceImpl:19 - Successful creating author
+2021-06-26 18:35:03 INFO  AuthorServiceImpl:31 - Start reading author by ID
+2021-06-26 18:35:03 INFO  AuthorServiceImpl:32 - End reading author by ID
+2021-06-26 18:35:13 INFO  AuthorServiceImpl:45 - Start deleting author by ID
+2021-06-26 18:35:13 INFO  AuthorServiceImpl:47 - End deleting author by ID
+2021-06-26 18:35:59 INFO  AuthorServiceImpl:17 - Start creating author
+2021-06-26 18:35:59 INFO  AuthorServiceImpl:19 - Successful creating author
+2021-06-26 18:36:31 INFO  AuthorServiceImpl:17 - Start creating book
+2021-06-26 18:36:31 INFO  AuthorServiceImpl:19 - End creating book
+2021-06-26 18:36:48 INFO  AuthorServiceImpl:45 - Start deleting the book
+2021-06-26 18:36:48 INFO  AuthorServiceImpl:47 - End deleting the book
+2021-06-26 19:06:36 INFO  AuthorServiceImpl:17 - Start creating book
+2021-06-26 19:06:36 INFO  AuthorServiceImpl:19 - End creating book
+2021-06-26 19:06:51 INFO  AuthorServiceImpl:17 - Start creating author
+2021-06-26 19:06:51 INFO  AuthorServiceImpl:19 - Successful creating author
+2021-06-26 19:07:22 INFO  AuthorServiceImpl:38 - Start updating author
+2021-06-26 19:07:22 INFO  AuthorServiceImpl:40 - End updating author
+2021-06-26 19:07:46 INFO  AuthorServiceImpl:45 - Start deleting author by ID
+2021-06-26 19:07:46 INFO  AuthorServiceImpl:47 - End deleting author by ID
+2021-06-26 19:08:30 INFO  AuthorServiceImpl:17 - Start creating author
+2021-06-26 19:08:30 INFO  AuthorServiceImpl:19 - Successful creating author
+2021-06-26 19:08:54 INFO  AuthorServiceImpl:52 - Start getting all books by author
+2021-06-26 19:08:54 INFO  AuthorServiceImpl:54 - End getting all books by author
+2021-06-26 19:09:22 INFO  AuthorServiceImpl:17 - Start creating author
+2021-06-26 19:09:22 INFO  AuthorServiceImpl:19 - Successful creating author
+2021-06-26 19:09:35 INFO  AuthorServiceImpl:38 - Start updating author
+2021-06-26 19:09:35 INFO  AuthorServiceImpl:40 - End updating author
+2021-06-26 19:27:41 INFO  AuthorServiceImpl:17 - Start creating author
+2021-06-26 19:27:41 INFO  AuthorServiceImpl:19 - Successful creating author
+2021-06-26 19:28:00 INFO  AuthorServiceImpl:38 - Start updating author
+2021-06-26 19:28:00 INFO  AuthorServiceImpl:40 - End updating author
+2021-06-26 19:29:23 INFO  AuthorServiceImpl:17 - Start creating author
+2021-06-26 19:29:23 INFO  AuthorServiceImpl:19 - Successful creating author
+2021-06-26 19:29:38 INFO  AuthorServiceImpl:38 - Start updating author
+2021-06-26 19:29:39 INFO  AuthorServiceImpl:40 - End updating author
+2021-06-26 19:32:56 INFO  AuthorServiceImpl:17 - Start creating author
+2021-06-26 19:32:56 INFO  AuthorServiceImpl:19 - Successful creating author
+2021-06-26 19:33:24 INFO  AuthorServiceImpl:38 - Start updating author
+2021-06-26 19:33:24 INFO  AuthorServiceImpl:40 - End updating author
+2021-06-26 19:33:57 INFO  AuthorServiceImpl:45 - Start deleting author by ID
+2021-06-26 19:33:57 INFO  AuthorServiceImpl:47 - End deleting author by ID
+2021-06-26 22:18:57 INFO  AuthorServiceImpl:17 - Start creating book
+2021-06-26 22:18:57 INFO  AuthorServiceImpl:19 - End creating book
+2021-06-26 22:19:13 INFO  AuthorServiceImpl:17 - Start creating book
+2021-06-26 22:19:13 INFO  AuthorServiceImpl:19 - End creating book
+2021-06-26 22:19:28 INFO  AuthorServiceImpl:17 - Start creating book
+2021-06-26 22:19:28 INFO  AuthorServiceImpl:19 - End creating book
+2021-06-26 22:19:57 INFO  AuthorServiceImpl:38 - Start updating the book
+2021-06-26 22:19:57 INFO  AuthorServiceImpl:40 - End updating the book
+2021-06-26 22:21:42 INFO  AuthorServiceImpl:17 - Start creating book
+2021-06-26 22:21:42 INFO  AuthorServiceImpl:19 - End creating book
+2021-06-26 22:21:59 INFO  AuthorServiceImpl:38 - Start updating the book
+2021-06-26 22:21:59 INFO  AuthorServiceImpl:40 - End updating the book
+2021-06-26 22:27:14 INFO  AuthorServiceImpl:17 - Start creating author
+2021-06-26 22:27:14 INFO  AuthorServiceImpl:19 - Successful creating author
+2021-06-26 22:28:00 INFO  AuthorServiceImpl:17 - Start creating author
+2021-06-26 22:28:00 INFO  AuthorServiceImpl:19 - Successful creating author
+2021-06-26 22:28:20 INFO  AuthorServiceImpl:17 - Start creating author
+2021-06-26 22:28:20 INFO  AuthorServiceImpl:19 - Successful creating author
+2021-06-26 22:28:30 INFO  AuthorServiceImpl:38 - Start updating author
+2021-06-26 22:28:30 INFO  AuthorServiceImpl:40 - End updating author
+2021-06-26 23:57:33 INFO  AuthorServiceImpl:17 - Start creating author
+2021-06-26 23:57:33 INFO  AuthorServiceImpl:19 - Successful creating author
+2021-06-26 23:58:03 INFO  AuthorServiceImpl:38 - Start updating author
+2021-06-26 23:58:03 INFO  AuthorServiceImpl:40 - End updating author
+2021-06-26 23:59:05 INFO  AuthorServiceImpl:38 - Start updating author
+2021-06-26 23:59:05 INFO  AuthorServiceImpl:40 - End updating author
+2021-06-27 00:00:05 INFO  AuthorServiceImpl:17 - Start creating author
+2021-06-27 00:00:05 INFO  AuthorServiceImpl:19 - Successful creating author
+2021-06-27 00:00:19 INFO  AuthorServiceImpl:38 - Start updating author
+2021-06-27 00:00:20 INFO  AuthorServiceImpl:40 - End updating author
+2021-06-27 00:04:38 INFO  AuthorServiceImpl:17 - Start creating author
+2021-06-27 00:04:38 INFO  AuthorServiceImpl:19 - Successful creating author
+2021-06-27 00:04:51 INFO  AuthorServiceImpl:38 - Start updating author
+2021-06-27 00:04:51 INFO  AuthorServiceImpl:40 - End updating author
+2021-06-27 00:08:53 INFO  AuthorServiceImpl:17 - Start creating book
+2021-06-27 00:08:53 INFO  AuthorServiceImpl:19 - End creating book
+2021-06-27 00:09:14 INFO  AuthorServiceImpl:17 - Start creating book
+2021-06-27 00:09:14 INFO  AuthorServiceImpl:19 - End creating book
+2021-06-27 00:09:31 INFO  AuthorServiceImpl:17 - Start creating book
+2021-06-27 00:09:31 INFO  AuthorServiceImpl:19 - End creating book
+2021-06-27 00:09:41 INFO  AuthorServiceImpl:17 - Start creating book
+2021-06-27 00:09:41 INFO  AuthorServiceImpl:19 - End creating book
+2021-06-27 00:09:45 INFO  AuthorServiceImpl:24 - Start reading all books
+2021-06-27 00:09:45 INFO  AuthorServiceImpl:25 - End reading all books
+2021-06-27 00:09:56 INFO  AuthorServiceImpl:24 - Start reading all authors
+2021-06-27 00:09:56 INFO  AuthorServiceImpl:25 - End reading all authors
+2021-06-27 00:10:06 INFO  AuthorServiceImpl:31 - Start reading by ID
+2021-06-27 00:10:06 INFO  AuthorServiceImpl:32 - End reading by ID
+2021-06-27 00:10:23 INFO  AuthorServiceImpl:38 - Start updating the book
+2021-06-27 00:10:23 INFO  AuthorServiceImpl:40 - End updating the book
+2021-06-27 00:12:11 INFO  AuthorServiceImpl:17 - Start creating book
+2021-06-27 00:12:11 INFO  AuthorServiceImpl:19 - End creating book
+2021-06-27 00:12:29 INFO  AuthorServiceImpl:17 - Start creating book
+2021-06-27 00:12:29 INFO  AuthorServiceImpl:19 - End creating book
+2021-06-27 00:13:02 INFO  AuthorServiceImpl:38 - Start updating the book
+2021-06-27 00:13:02 INFO  AuthorServiceImpl:40 - End updating the book
+2021-06-27 00:25:40 INFO  AuthorServiceImpl:17 - Start creating author
+2021-06-27 00:25:40 INFO  AuthorServiceImpl:19 - Successful creating author
+2021-06-27 00:25:59 INFO  AuthorServiceImpl:17 - Start creating author
+2021-06-27 00:25:59 INFO  AuthorServiceImpl:19 - Successful creating author
+2021-06-27 00:26:05 INFO  AuthorServiceImpl:45 - Start deleting author by ID
+2021-06-27 00:26:05 INFO  AuthorServiceImpl:47 - End deleting author by ID
+2021-06-27 00:27:54 INFO  AuthorServiceImpl:17 - Start creating author
+2021-06-27 00:27:54 INFO  AuthorServiceImpl:19 - Successful creating author
+2021-06-27 00:28:04 INFO  AuthorServiceImpl:17 - Start creating author
+2021-06-27 00:28:04 INFO  AuthorServiceImpl:19 - Successful creating author
+2021-06-27 00:28:22 INFO  AuthorServiceImpl:45 - Start deleting author by ID
+2021-06-27 00:28:22 INFO  AuthorServiceImpl:47 - End deleting author by ID
+2021-06-27 00:29:35 INFO  AuthorServiceImpl:17 - Start creating author
+2021-06-27 00:29:35 INFO  AuthorServiceImpl:19 - Successful creating author
+2021-06-27 00:29:55 INFO  AuthorServiceImpl:52 - Start getting all books by author
+2021-06-27 00:29:55 INFO  AuthorServiceImpl:54 - End getting all books by author
+2021-06-29 15:20:36 INFO  AuthorServiceImpl:17 - Start creating book
+2021-06-29 15:20:36 INFO  AuthorServiceImpl:19 - End creating book
+2021-06-29 15:20:45 INFO  AuthorServiceImpl:31 - Start reading by ID
+2021-06-29 15:20:45 INFO  AuthorServiceImpl:32 - End reading by ID
