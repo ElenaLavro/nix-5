@@ -24,7 +24,7 @@ public class RouteDAO implements BaseDao<Route> {
         ps.setInt(2, route.getFromID());
         ps.setInt(3, route.getToID());
         ps.setInt(4, route.getCost());
-        ps.execute();
+        ps.executeBatch();
     }
 
     @Override

@@ -3,47 +3,63 @@ package com.company.dao.impl;
 import com.company.dao.BaseDao;
 import com.company.entity.Location;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class LocationDAO implements BaseDao<Location> {
-    private Connection connection;
+    private final Connection connection;
+    private Statement statement;
 
-    public LocationDAO(Connection thisConnection) {
+    public LocationDAO(Connection thisConnection, Statement thisStatement) {
         connection = thisConnection;
+        statement = thisStatement;
     }
 
     @Override
     public void create(Location location) throws SQLException {
-        PreparedStatement ps = connection.prepareStatement("INSERT INTO Locations(id,name) VALUE (?,?)");
-        ps.setInt(1, location.getId());
-        ps.setString(2, location.getName());
-        ps.execute();
+        try (
+                PreparedStatement ps = connection.prepareStatement("INSERT INTO location (id, name) VALUES (?,?) on conflict do nothing",
+                        PreparedStatement.RETURN_GENERATED_KEYS
+                )) {
+            ps.setInt(1, location.getId());
+            ps.setString(2, location.getName());
+            statement = connection.createStatement();
+            statement.executeBatch();
+//            ps.executeBatch();
+        } catch (SQLException e) {
+            throw new SQLException(e);
+        }
     }
-    
+
     @Override
     public List<Location> read() throws SQLException {
-        PreparedStatement ps = connection.prepareStatement("SELECT * FROM Locations");
-        ResultSet resultSet = ps.executeQuery();
-        List<Location> allLocations = new ArrayList<>();
-        while (resultSet.next()) {
-            int i = resultSet.getInt("id");
-            String s = resultSet.getString("name");
-            Location location = new Location();
-            location.setId(i);
-            location.setName(s);
-            allLocations.add(location);
+        try
+//        PreparedStatement ps = connection.prepareStatement()
+        {
+            statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM location");
+            List<Location> allLocations = new ArrayList<>();
+            Location location;
+            while (resultSet.next()) {
+                location = new Location();
+                int i = resultSet.getInt("id");
+                String s = resultSet.getString("name");
+                location.setId(i);
+                location.setName(s);
+                allLocations.add(location);
+            }
+            resultSet.close();
+            statement.close();
+            return allLocations;
+        } catch (SQLException e) {
+            throw new SQLException(e);
         }
-        return allLocations;
     }
 
     @Override
     public Location read(int id) throws SQLException {
-        PreparedStatement ps = connection.prepareStatement("SELECT * FROM Locations WHERE id = (?)");
+        PreparedStatement ps = connection.prepareStatement("SELECT * FROM Location WHERE id = (?)");
         ps.setInt(1, id);
         ResultSet resultSet = ps.executeQuery();
         while (resultSet.next()) {

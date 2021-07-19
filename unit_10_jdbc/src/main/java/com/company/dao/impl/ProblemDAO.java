@@ -19,12 +19,13 @@ public class ProblemDAO implements BaseDao<Problem> {
 
     @Override
     public void create(Problem problem) throws SQLException {
-        try {
-            PreparedStatement ps = connection.prepareStatement("INSERT INTO Problem(id,fromID,toID) Values(?,?,?)");
+        try (
+                PreparedStatement ps = connection.prepareStatement("INSERT INTO Problem(id,fromID,toID) Values(?,?,?)");
+        ) {
             ps.setInt(1, problem.getId());
             ps.setInt(2, problem.getFromID());
             ps.setInt(3, problem.getToID());
-            ps.execute();
+            ps.executeBatch();
         } catch (SQLException e) {
             throw new SQLException(e);
         }

@@ -1,10 +1,10 @@
 package com.company;
 
-import com.company.controller.HelperJDBC;
+import com.company.db.GetDataFromFile;
 
 public class Main_JDBC {
     public static void main(String[] args) {
-        HelperJDBC helper = new HelperJDBC();
-        helper.run();
+        GetDataFromFile getData = new GetDataFromFile();
+        getData.getData();
     }
 }

@@ -22,7 +22,7 @@ public class SolutionDAO implements BaseDao<Solution> {
         PreparedStatement ps = connection.prepareStatement("INSERT INTO Solution(problemID,cost) Values(?,?)");
         ps.setInt(1, solution.getProblemID());
         ps.setInt(2, solution.getCost());
-        ps.execute();
+        ps.executeBatch();
     }
 
     @Override
