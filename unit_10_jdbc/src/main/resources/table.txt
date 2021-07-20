@@ -1,0 +1,68 @@
+create table if not exists location
+(
+	id integer not null
+		constraint table_name_pk
+			primary key,
+	name text not null
+);
+
+alter table location owner to postgres;
+
+create unique index if not exists table_name_name_uindex
+	on location (name);
+
+grant delete, insert, references, select, trigger, truncate, update on location to public;
+
+create table if not exists route
+(
+	id serial not null
+		constraint route_pk
+			primary key,
+	cost integer,
+	from_id integer not null
+		constraint route_location_id_fk
+			references location
+				on update restrict on delete cascade,
+	to_id integer
+		constraint route_location_id_fk_2
+			references location
+				on update restrict on delete cascade
+);
+
+alter table route owner to postgres;
+
+grant delete, insert, references, select, trigger, truncate, update on route to public;
+
+create table if not exists problem
+(
+	id integer not null
+		constraint problem_pk
+			primary key,
+	from_id integer
+		constraint from_id
+			references location
+				on update restrict on delete cascade,
+	to_id integer
+		constraint to_id
+			references location
+				on update restrict on delete cascade
+);
+
+alter table problem owner to postgres;
+
+grant delete, insert, references, select, trigger, truncate, update on problem to public;
+
+create table if not exists solution
+(
+	problem_id integer not null
+		constraint solution_pk
+			primary key
+		constraint problem_id
+			references problem
+				on update restrict on delete cascade,
+	cost integer
+);
+
+alter table solution owner to postgres;
+
+grant delete, insert, references, select, trigger, truncate, update on solution to public;

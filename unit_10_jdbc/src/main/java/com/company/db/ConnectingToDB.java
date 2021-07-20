@@ -14,7 +14,7 @@ public class ConnectingToDB {
             String url = properties.getProperty("url");
             String user = properties.getProperty("user");
             String password = properties.getProperty("password");
-            return DriverManager.getConnection(url, user,password);
+            return DriverManager.getConnection(url, user, password);
         } catch (IOException ioException) {
             throw new Exception(ioException);
         }

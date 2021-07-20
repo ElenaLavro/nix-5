@@ -11,77 +11,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProblemDAO implements BaseDao<Problem> {
-    private Connection connection;
+    private final Connection connection;
 
     public ProblemDAO(Connection thisConnection) {
         connection = thisConnection;
     }
 
     @Override
-    public void create(Problem problem) throws SQLException {
+    public List<Problem> read() throws SQLException {
+        List<Problem> allProblems = new ArrayList<>();
         try (
-                PreparedStatement ps = connection.prepareStatement("INSERT INTO Problem(id,fromID,toID) Values(?,?,?)");
+                PreparedStatement ps = connection.prepareStatement("SELECT * FROM problem")
         ) {
-            ps.setInt(1, problem.getId());
-            ps.setInt(2, problem.getFromID());
-            ps.setInt(3, problem.getToID());
-            ps.executeBatch();
-        } catch (SQLException e) {
-            throw new SQLException(e);
-        }
-    }
-
-    @Override
-    public List read() throws SQLException {
-        try {
-            PreparedStatement ps = connection.prepareStatement("SELECT * FROM Problem");
-            ResultSet resultSet = ps.executeQuery();
-            List<Problem> allProblems = new ArrayList<>();
-            while (resultSet.next()) {
-                int id = resultSet.getInt("id");
-                int from_id = resultSet.getInt("fromID");
-                int to_id = resultSet.getInt("toID");
-                Problem problem = new Problem();
-                problem.setId(id);
-                problem.setFromID(from_id);
-                problem.setToID(to_id);
-                allProblems.add(problem);
-            }
-            return allProblems;
-        } catch (SQLException e) {
-            throw new SQLException(e);
-        }
-    }
-
-    @Override
-    public Problem read(int id) throws SQLException {
-        try {
-            PreparedStatement ps = connection.prepareStatement("SELECT * FROM Problem WHERE id = (?)");
-            ps.setInt(1, id);
             ResultSet resultSet = ps.executeQuery();
             while (resultSet.next()) {
-                int newFromID = resultSet.getInt("fromID");
-                int newToID = resultSet.getInt("toID");
-                Problem problem = new Problem();
-                problem.setFromID(newFromID);
-                problem.setToID(newToID);
-                return problem;
+                allProblems.add(new Problem(resultSet.getInt("id"), resultSet.getInt("from_id"), resultSet.getInt("to_id")));
             }
-            return null;
+            ps.close();
+            resultSet.close();
         } catch (SQLException e) {
             throw new SQLException(e);
         }
+        return allProblems;
     }
 
-
     @Override
-    public void update(Problem problem, int id) {
-
-    }
-
-
-    @Override
-    public void delete(int id) {
-
+    public Problem read(int id) {
+        return null;
     }
 }

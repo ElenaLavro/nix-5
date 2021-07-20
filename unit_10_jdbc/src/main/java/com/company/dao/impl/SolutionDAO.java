@@ -11,62 +11,56 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SolutionDAO implements BaseDao<Solution> {
-    private Connection connection;
+    private final Connection connection;
 
     public SolutionDAO(Connection thisConnection) {
         connection = thisConnection;
     }
 
-    @Override
-    public void create(Solution solution) throws SQLException {
-        PreparedStatement ps = connection.prepareStatement("INSERT INTO Solution(problemID,cost) Values(?,?)");
-        ps.setInt(1, solution.getProblemID());
-        ps.setInt(2, solution.getCost());
-        ps.executeBatch();
+    public void update(Solution solution, int id) throws SQLException {
+        try (
+                PreparedStatement ps = connection.prepareStatement("UPDATE solution SET cost = (?) WHERE problem_id = (?)")
+        ) {
+            ps.setInt(1, solution.getCost());
+            ps.setInt(2, id);
+            ps.executeUpdate();
+            connection.commit();
+        } catch (SQLException e) {
+            connection.rollback();
+            throw new SQLException(e);
+        }
     }
 
     @Override
     public List<Solution> read() throws SQLException {
-        PreparedStatement ps = connection.prepareStatement("SELECT * FROM Solution");
-        ResultSet resultSet = ps.executeQuery();
         List<Solution> allSolutions = new ArrayList<>();
-        while (resultSet.next()) {
-            int problemID = resultSet.getInt("problemID");
-            int cost = resultSet.getInt("cost");
-            Solution solution = new Solution();
-            solution.setProblemID(problemID);
-            solution.setCost(cost);
-            allSolutions.add(solution);
+        try (
+                PreparedStatement ps = connection.prepareStatement("SELECT solution.id , from_id, to_id from problem LEFT JOIN solution s on problem.id = s.problem_id AND s.cost IS NULL")
+        ) {
+            ResultSet resultSet = ps.executeQuery();
+            while (resultSet.next()) {
+                allSolutions.add(new Solution(resultSet.getInt("problem_id"), resultSet.getInt("cost")));
+            }
+            ps.close();
+            resultSet.close();
+        } catch (SQLException e) {
+            throw new SQLException(e);
         }
         return allSolutions;
     }
 
     @Override
     public Solution read(int id) throws SQLException {
-        PreparedStatement ps = connection.prepareStatement("SELECT * FROM Solution WHERE id = (?)");
+        PreparedStatement ps = connection.prepareStatement("SELECT * FROM solution WHERE problem_id = (?)");
         ps.setInt(1, id);
         ResultSet resultSet = ps.executeQuery();
-        while (resultSet.next()) {
-            int newProblemId = resultSet.getInt("problemID");
-            int newCost = resultSet.getInt("cost");
-            Solution solution = new Solution();
-            solution.setProblemID(newProblemId);
-            solution.setCost(newCost);
-            return solution;
+        if (resultSet.next()) {
+            if (resultSet.getInt("cost") != 0) {
+                return new Solution(resultSet.getInt("problemID"), resultSet.getInt("cost"));
+            }
         }
+        resultSet.close();
         return null;
     }
 
-    @Override
-    public void update(Solution solution, int id) throws SQLException {
-        PreparedStatement ps = connection.prepareStatement("UPDATE Solution SET cost = (?) WHERE problemID = (?)");
-        ps.setInt(1, solution.getCost());
-        ps.setInt(2, id);
-        ps.execute();
-    }
-
-    @Override
-    public void delete(int id) {
-
-    }
 }

@@ -29,14 +29,15 @@ public class ShortestPath {
 
     private void addEdges() {
         for (Route edge : edges) {
-            DefaultWeightedEdge thisEdge = graph.addEdge(edge.getFromID(), edge.getToID());
+            DefaultWeightedEdge thisEdge = graph.addEdge(edge.getFrom_id(), edge.getTo_id());
             if (thisEdge != null) {
                 graph.setEdgeWeight(thisEdge, edge.getCost());
             }
         }
     }
+
     public int difBetweenCities(int from, int to) {
         DijkstraShortestPath<Integer, DefaultWeightedEdge> shortestPath = new DijkstraShortestPath<>(graph);
-        return (int) (shortestPath.getPath(from,to).getWeight());
+        return (int) (shortestPath.getPath(from, to).getWeight());
     }
 }

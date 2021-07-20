@@ -1,14 +1,20 @@
 package com.company.entity;
 
 public class Solution {
-    private int problemID;
+    private int problem_id;
     private int cost;
-    public int getProblemID() {
-        return problemID;
+
+    public Solution(int problemID, int cost) {
+        this.problem_id = problemID;
+        this.cost = cost;
     }
 
-    public void setProblemID(int problemID) {
-        this.problemID = problemID;
+    public int getProblem_id() {
+        return problem_id;
+    }
+
+    public void setProblem_id(int problem_id) {
+        this.problem_id = problem_id;
     }
 
     public int getCost() {
