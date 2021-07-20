@@ -14,6 +14,7 @@ public class ShortestPath {
     private List<Route> edges;
 
     public ShortestPath(List<Location> vertices, List<Route> edges) {
+
         this.vertices = vertices;
         this.edges = edges;
         addVertices();

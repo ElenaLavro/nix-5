@@ -1,10 +1,10 @@
 package com.company;
 
-import com.company.db.GetDataFromFile;
+import com.company.db.FindingSolutions;
 
 public class Main_JDBC {
     public static void main(String[] args) {
-        GetDataFromFile getData = new GetDataFromFile();
+        FindingSolutions getData = new FindingSolutions();
         getData.getData();
     }
 }

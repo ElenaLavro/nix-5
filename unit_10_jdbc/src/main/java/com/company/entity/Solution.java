@@ -4,6 +4,7 @@ public class Solution {
     private int problem_id;
     private int cost;
 
+
     public Solution(int problemID, int cost) {
         this.problem_id = problemID;
         this.cost = cost;

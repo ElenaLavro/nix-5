@@ -12,7 +12,6 @@ import java.util.List;
 
 public class ProblemDAO implements BaseDao<Problem> {
     private final Connection connection;
-
     public ProblemDAO(Connection thisConnection) {
         connection = thisConnection;
     }

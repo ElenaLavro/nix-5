@@ -7,6 +7,7 @@ import java.sql.DriverManager;
 import java.util.Properties;
 
 public class ConnectingToDB {
+
     public static Connection getConnection() throws Exception {
         try (InputStream is = ConnectingToDB.class.getResourceAsStream("/jdbc.properties")) {
             Properties properties = new Properties();

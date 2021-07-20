@@ -6,6 +6,7 @@ public class Route {
     private int to_id;
     private int cost;
 
+
     public Route(int id, int fromID, int toID, int cost) {
         this.id = id;
         this.from_id = fromID;

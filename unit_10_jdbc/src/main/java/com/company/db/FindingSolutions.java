@@ -15,7 +15,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
-public class GetDataFromFile {
+public class FindingSolutions {
     public void getData() {
         try {
             Connection connection = ConnectingToDB.getConnection();

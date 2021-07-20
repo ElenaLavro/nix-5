@@ -5,6 +5,7 @@ public class Problem {
     private int from_id;
     private int to_id;
 
+
     public Problem(int id, int fromID, int toID) {
         this.id = id;
         this.from_id = fromID;

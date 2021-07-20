@@ -43,6 +43,7 @@ public class SolutionDAO implements BaseDao<Solution> {
             }
             ps.close();
             resultSet.close();
+
         } catch (SQLException e) {
             throw new SQLException(e);
         }
