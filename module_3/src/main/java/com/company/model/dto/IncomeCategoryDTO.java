@@ -8,7 +8,6 @@ public class IncomeCategoryDTO {
     private List<String> operationDTOS;
 
     public IncomeCategoryDTO() {
-
     }
 
     public Long getId() {
