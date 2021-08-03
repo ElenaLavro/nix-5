@@ -3,28 +3,28 @@ package com.company.model.dto;
 import java.util.List;
 
 public class IncomeCategoryDTO {
-    private Long income_id;
-    private String income_name;
+    private Long id;
+    private String name;
     private List<String> operationDTOS;
 
     public IncomeCategoryDTO() {
 
     }
 
-    public Long getIncome_id() {
-        return income_id;
+    public Long getId() {
+        return id;
     }
 
-    public void setIncome_id(Long income_id) {
-        this.income_id = income_id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public String getIncome_name() {
-        return income_name;
+    public String getName() {
+        return name;
     }
 
-    public void setIncome_name(String income_name) {
-        this.income_name = income_name;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public List<String> getOperationDTOS() {
