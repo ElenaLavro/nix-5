@@ -1,4 +1,4 @@
-package entity;
+package com.company;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.ConcurrentHashMap;
